@@ -16,7 +16,7 @@ Container_Boundary(element, "元素") {
         Container_Boundary(proton, "陽子") {
           Container(protonUpTypeQuark1, "アップクォーク")
           Container(protonUpTypeQuark2, "アップクォーク")
-          Container(protonDownTypeQuark, "ダウンクォーク")
+          Container(protonDownTypeQuark1, "ダウンクォーク")
         }
         Container_Boundary(neutron, "中性子") {
           Container(neutonUpTypeQuark1, "アップクォーク")
@@ -24,10 +24,19 @@ Container_Boundary(element, "元素") {
           Container(neutonDownTypeQuark2, "ダウンクォーク2")
         }
       }
-      Container(SystemB, "電子")
+      Container(atomElectron, "電子")
     }
   }
 }
+Rel(electron, atomElectron, "")
+
+Rel(upQuark, protonUpTypeQuark1, "")
+Rel(upQuark, protonUpTypeQuark2, "")
+Rel(upQuark, neutonUpTypeQuark1, "")
+
+Rel(downQuark, protonDownTypeQuark1, "")
+Rel(downQuark, neutonDownTypeQuark1, "")
+Rel(downQuark, neutonDownTypeQuark2, "")
 
 Container_Boundary(hadron, "ハドロン") {
   Container_Boundary(baryon, "バリオン") {
@@ -35,6 +44,62 @@ Container_Boundary(hadron, "ハドロン") {
     Container(baryonQuark2, "クォーク2")
     Container(baryonQuark3, "クォーク3")
   }
+}
+
+Container_Boundary(elementaryParticle, "素粒子") {
+  Container_Boundary(fermion, "フェルミ粒子") {
+    Container_Boundary(quark, "クォーク") {
+      Container_Boundary(upTypeQuark, "上系列クォーク") {
+        Container(upQuark, "アップクォーク（u）")
+        Container(charmQuark, "チャームクォーク（c）")
+        Container(topQuark, "トップクォーク（t）")
+      }
+      Container_Boundary(downTypeQuark, "下系列クォーク") {
+        Container(downQuark, "ダウンクォーク（d）")
+        Container(strangeQuark, "ストレンジクォーク（s）")
+        Container(bottomQuark, "ボトムクォーク（b）")
+      }
+    }
+    Container_Boundary(lepton, "レプトン") {
+      Container_Boundary(chargedLepton, "荷電レプトン") {
+        Container(electron, "電子 (e)")
+        Container(muon, "ミュー粒子（μ）")
+        Container(tauon, "タウ粒子（τ）")
+      }
+      Container_Boundary(downQuark, "ニュートリノ") {
+        Container(electronNeutrino, "電子ニュートリノ（νe）")
+        Container(muonNeutrino, "ミューニュートリノ（νμ）")
+        Container(tauonNeutrino, "タウニュートリノ（ντ）")
+      }
+    }
+  }
+  Container_Boundary(boson, "ボース粒子") {
+    Container_Boundary(gaugeBoson, "ゲージ粒子") {
+      Container(gluon, "グルーオン")
+      Container_Boundary(weakBoson, "ウィークボソン") {
+        Container(wBoson, "Wボソン")
+        Container(zBoson, "Zボソン")      
+      }
+      Container(photon, "光子")
+      Container(graviton, "重力子")
+    }
+    Container_Boundary(scalarBoson, "スカラー粒子") {
+      Container(higgsBoson , "ヒッグス粒子")
+    }
+  }
+}
+
+Rel(gluon, strongInteraction, "")
+Rel(wBoson, weakInteraction, "")
+Rel(zBoson, weakInteraction, "")
+Rel(photon, electromagneticInteraction, "")
+Rel(graviton, gravitationalInteraction, "")
+
+Container_Boundary(fundamentalInteraction, "基本相互作用") {
+  Container(strongInteraction, "強い相互作用")
+  Container(weakInteraction, "弱い相互作用")
+  Container(electromagneticInteraction, "電磁相互作用")
+  Container(gravitationalInteraction, "重力相互作用")
 }
 
 ```
@@ -106,6 +171,7 @@ Container_Boundary(hadron, "ハドロン") {
 - フェルミ粒子の一つである。
 - 荷電レプトンおよびニュートリノに分類される。
 - それぞれに[反粒子](https://ja.wikipedia.org/wiki/%E5%8F%8D%E7%B2%92%E5%AD%90)が存在する。
+- 軽粒子とも呼ばれる。
 
 ##### 荷電レプトン（charged-lepton）
 
@@ -141,13 +207,10 @@ Container_Boundary(hadron, "ハドロン") {
 - 素粒子のグループの一つである。
 - \hbar の整数倍のスピンを伴う粒子の総称である。
 
-#### ヒッグス粒子
-
-ボース粒子の一つである。素粒子に質量を与える。ヒッグス機構において存在が予想された。
-
 #### [ゲージ粒子](https://ja.wikipedia.org/wiki/%E3%82%B2%E3%83%BC%E3%82%B8%E7%B2%92%E5%AD%90)
 
-素粒子間の相互作用を伝達する。
+- ボース粒子の一つである。
+- 素粒子間の相互作用を伝達する。
 
 ##### [基本相互作用](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%9C%AC%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8)
 
@@ -201,6 +264,15 @@ Container_Boundary(hadron, "ハドロン") {
 
 [重力](https://ja.wikipedia.org/wiki/%E9%87%8D%E5%8A%9B)
 
+#### [スカラー粒子](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%A9%E3%83%BC%E7%B2%92%E5%AD%90)
+
+- ボース粒子の一つである。
+
+##### ヒッグス粒子
+
+- スカラー粒子の一つである。
+- 素粒子に質量を与える。
+- ヒッグス機構において存在が予想された。
 
 ## 理論
 

@@ -5,7 +5,7 @@
 ```mermaid
 C4Component
 
-title Material & Interaction
+title 物質 と 相互作用
 
 Container_Boundary(element, "元素") {
   Container_Boundary(atom, "原子") {
@@ -119,4 +119,4 @@ Container_Boundary(fundamentalInteraction, "基本相互作用") {
 - [中間子](https://ja.wikipedia.org/wiki/%E4%B8%AD%E9%96%93%E5%AD%90)
 - [複合粒子](https://ja.wikipedia.org/wiki/%E8%A4%87%E5%90%88%E7%B2%92%E5%AD%90)
 - [紐](https://en.wikipedia.org/wiki/String_(physics))
-- 理論の分離
+

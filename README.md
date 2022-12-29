@@ -2,12 +2,10 @@
 
 個人的な整理の為の覚書です。
 
-https://github.com/csymapp/mermaid-c4-model/blob/master/README.md
-
 ```mermaid
 C4Component
 
-title Material
+title Material & Interaction
 
 Container_Boundary(element, "元素") {
   Container_Boundary(atom, "原子") {

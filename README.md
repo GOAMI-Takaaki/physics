@@ -106,11 +106,17 @@ Container_Boundary(fundamentalInteraction, "基本相互作用") {
 
 ### [元素](https://ja.wikipedia.org/wiki/%E5%85%83%E7%B4%A0)
 
-「原子」が《物質を構成する具体的要素》を指すのに対し「元素」は《性質を包括する抽象的概念》を示す。
+- 性質を包括する抽象的概念
+
+### [分子](https://ja.wikipedia.org/wiki/%E5%88%86%E5%AD%90)
+
+- 2つ以上の原子から構成される。
+- 電荷的に中性である。
 
 ### [原子](https://ja.wikipedia.org/wiki/%E5%8E%9F%E5%AD%90)
 
-元素の最小単位。その実態は原子核と電子の電磁相互作用による束縛状態である。
+- 元素の最小単位。
+- 原子核と電子の電磁相互作用による束縛状態である。
 
 ### [原子核](https://ja.wikipedia.org/wiki/%E5%8E%9F%E5%AD%90%E6%A0%B8)
 
@@ -119,7 +125,7 @@ Container_Boundary(fundamentalInteraction, "基本相互作用") {
 
 ### [核子](https://ja.wikipedia.org/wiki/%E6%A0%B8%E5%AD%90)
 
-原子核を構成する陽子と中性子の総称。
+- 原子核を構成する陽子と中性子の総称。
 
 ### [陽子](https://ja.wikipedia.org/wiki/%E9%99%BD%E5%AD%90)
 
@@ -285,3 +291,18 @@ Container_Boundary(fundamentalInteraction, "基本相互作用") {
 ### [超弦理論](https://ja.wikipedia.org/wiki/%E8%B6%85%E5%BC%A6%E7%90%86%E8%AB%96)
 
 ### [電磁気学](https://ja.wikipedia.org/wiki/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6)
+
+## TODO
+
+- 元素の位置づけの見直し
+- [粒子統計](https://ja.wikipedia.org/wiki/%E7%B2%92%E5%AD%90%E7%B5%B1%E8%A8%88)
+- [スピン](https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%94%E3%83%B3%E8%A7%92%E9%81%8B%E5%8B%95%E9%87%8F)
+- [世代](https://ja.wikipedia.org/wiki/%E4%B8%96%E4%BB%A3_(%E7%B4%A0%E7%B2%92%E5%AD%90))
+- [電荷](https://ja.wikipedia.org/wiki/%E9%9B%BB%E8%8D%B7)
+- [色荷](https://ja.wikipedia.org/wiki/%E8%89%B2%E8%8D%B7)
+- [反粒子](https://ja.wikipedia.org/wiki/%E5%8F%8D%E7%B2%92%E5%AD%90)
+- [バリオン数](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%AA%E3%82%AA%E3%83%B3%E6%95%B0)
+- [中間子](https://ja.wikipedia.org/wiki/%E4%B8%AD%E9%96%93%E5%AD%90)
+- [複合粒子](https://ja.wikipedia.org/wiki/%E8%A4%87%E5%90%88%E7%B2%92%E5%AD%90)
+- [紐](https://en.wikipedia.org/wiki/String_(physics))
+- 理論の分離

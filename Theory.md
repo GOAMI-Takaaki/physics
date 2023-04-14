@@ -13,3 +13,9 @@
 ## [超弦理論](https://ja.wikipedia.org/wiki/%E8%B6%85%E5%BC%A6%E7%90%86%E8%AB%96)
 
 ## [電磁気学](https://ja.wikipedia.org/wiki/%E9%9B%BB%E7%A3%81%E6%B0%97%E5%AD%A6)
+
+## [繰り込み](https://ja.wikipedia.org/wiki/%E7%B9%B0%E3%82%8A%E8%BE%BC%E3%81%BF)
+
+- 計算結果が無限大に発散してしまうのを防ぐ数学的な技法である。
+- 場の量子論が満たすべき最重要な原理のひとつでもある。
+- 電磁相互作用に適用した量子電磁力学が完成した。

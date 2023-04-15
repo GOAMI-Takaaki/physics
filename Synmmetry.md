@@ -1,5 +1,8 @@
 # [対称性](https://ja.wikipedia.org/wiki/%E5%AF%BE%E7%A7%B0%E6%80%A7_(%E7%89%A9%E7%90%86%E5%AD%A6))
 
+- エネルギー的に安定な真空に落ち着くことで、より低い対称性の系へと移る。
+  - [自発的対称性の破れ](https://ja.wikipedia.org/wiki/%E8%87%AA%E7%99%BA%E7%9A%84%E5%AF%BE%E7%A7%B0%E6%80%A7%E3%81%AE%E7%A0%B4%E3%82%8C)
+
 ## CP対称性
 
 - 弱い相互作用では保存されない場合がある。

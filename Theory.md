@@ -1,5 +1,57 @@
 # 理論
 
+```mermaid
+stateDiagram-v2
+
+    state "電気" as el
+    state "磁気" as ma
+    state "電磁気力" as f
+    note right of f: マックスウェル
+
+    state "β崩壊" as b
+    state "弱い力" as w
+    note right of w: フェルミ
+
+    state "電弱統一理論" as fw
+    note right of fw: ワインバーグ・サラム理論
+
+    state "原子核" as at
+    state "強い力" as gl
+    note left of gl: 湯川
+    state "大統一理論" as fwgl
+    note right of fwgl: 超対称性理論
+
+    state "地上重力" as mo
+    note left of mo: ガリレオ
+
+    state "天体重力" as as
+    note left of as: ケプラー
+
+    state "重力" as gr
+    note left of gr: 一般相対性理論<br/>アインシュタイン
+    
+    state "重力" as gr
+    note left of gr: 一般相対性理論<br/>アインシュタイン
+
+    state "超大統一理論" as fwglr
+    note left of fwglr: 超弦理論？
+
+    el --> f
+    ma --> f
+    f --> fw
+    b --> w
+    w --> fw
+    fw --> fwgl
+    at --> gl
+    gl --> fwgl
+    fwgl --> fwglr
+    mo --> gr
+    as --> gr
+    gr --> fwglr
+```
+
+## [ワインバーグ・サラム理論](https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B0%EF%BC%9D%E3%82%B5%E3%83%A9%E3%83%A0%E7%90%86%E8%AB%96)
+
 ## [ニュートン力学](https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%88%E3%83%B3%E5%8A%9B%E5%AD%A6)
 
 ## [相対性理論](https://ja.wikipedia.org/wiki/%E7%9B%B8%E5%AF%BE%E6%80%A7%E7%90%86%E8%AB%96)

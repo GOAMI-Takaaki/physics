@@ -2,61 +2,48 @@
 
 ```mermaid
 stateDiagram-v2
+    state 第1相転移[10^-44秒後,10^33K] {
+        state 第2相転移[10^-36秒後,10^28K] {
+            state 第3相転移[10^-11秒後,10^16K] {
 
-    state "電気" as el
-    state "磁気" as ma
-    state "電磁気力" as f
-    note right of f
-        古典磁気力学
-        マックスウェル
-    end note
+                state 電磁気力 {
+                    state "電気" as el
+                    state "磁気" as ma
+                    state "古典電磁気力\n(マックスウェル)" as f
+                    state "量子電磁気力学(QED)" as qe
+                }
 
-    state "β崩壊" as b
-    state "弱い力" as w
-    note right of w: フェルミ
-    state "電弱統一理論" as fw
-    note right of fw
-        ワインバーグ・サラム理論
-        第3相転移 10^-11秒後
-    end note
+                state 弱い力 {
+                    state "β崩壊" as b
+                    state "弱い力\n(フェルミ)" as w
+                }
+                state "電弱統一理論\n[ワインバーグ・サラム理論]" as fw
+            }
 
-    state "原子核" as at
-    state "強い力" as gl
-    state "量子色力学" as qc
-    note left of gl: 湯川
-    state "大統一理論" as fwgl
-    note right of fwgl
-        超対称性理論
-        第2相転移 10^-36秒後
-    end note
+            state 強い力 {
+                state "原子核" as at
+                state "強い力\n(湯川)" as gl
+                state "量子色力学(QCD)" as qc
+            }
 
-    state "地上重力" as mo
-    note left of mo: ガリレオ
+            state "大統一理論\n[超対称性理論]" as fwgl
+        }
 
-    state "天体重力" as as
-    note left of as
-        ケプラーの法則
-    end note
-
-    state "万有引力" as ug
-    note left of ug: ニュートン
-
-    state "重力" as gr
-    note left of gr
-        一般相対性理論
-        アインシュタイン
-        第1相転移 10^-44秒後
-    end note
-    
-    state "量子重力" as qgr
-    note left of qgr: 未完成
-
-    state "超大統一理論" as fwglr
-    note left of fwglr: 超弦理論？
+        state 重力 {
+            state "地上重力\n(ガリレオ)" as mo
+            state "天体重力\n[ケプラーの法則]" as as
+            state "万有引力\n(ニュートン)" as ug
+            state "重力\n[一般相対性理論]\n(アインシュタイン)" as gr
+            
+            state "量子重力\n(未完成)" as qgr
+        }
+        state "超大統一理論\n[超弦理論？]" as fwglr
+    }
 
     el --> f
     ma --> f
-    f --> fw
+    f --> qe
+    qe --> fw
     b --> w
     w --> fw
     fw --> fwgl
@@ -69,9 +56,10 @@ stateDiagram-v2
     ug --> gr
     gr --> qgr
     qgr --> fwglr
+    fwglr --> [*]
 ```
 
-## [ワインバーグ・サラム理論](https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B0%EF%BC%9D%E3%82%B5%E3%83%A9%E3%83%A0%E7%90%86%E8%AB%96)
+## [（グラショウ・）ワインバーグ・サラム理論](https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%90%E3%83%BC%E3%82%B0%EF%BC%9D%E3%82%B5%E3%83%A9%E3%83%A0%E7%90%86%E8%AB%96)
 
 ## [ケプラーの法則](https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%97%E3%83%A9%E3%83%BC%E3%81%AE%E6%B3%95%E5%89%87)
 

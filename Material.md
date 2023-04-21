@@ -1,4 +1,29 @@
-# 物質
+# [物質](https://ja.wikipedia.org/wiki/%E7%89%A9%E8%B3%AA)
+
+```mermaid
+C4Component
+
+Container_Boundary(element, "元素") {
+  Container_Boundary(atom, "原子") {
+    Container_Boundary(atomicNucleus, "原子核") {
+      Container_Boundary(nucleon, "核子") {
+        Container_Boundary(proton, "陽子") {
+          Container(protonUpTypeQuark1, "アップクォーク")
+          Container(protonUpTypeQuark2, "アップクォーク")
+          Container(protonDownTypeQuark1, "ダウンクォーク")
+        }
+        Container_Boundary(neutron, "中性子") {
+          Container(neutonUpTypeQuark1, "アップクォーク")
+          Container(neutonDownTypeQuark1, "ダウンクォーク1")
+          Container(neutonDownTypeQuark2, "ダウンクォーク2")
+        }
+      }
+      Container(atomElectron, "電子")
+    }
+  }
+}
+
+```
 
 ### [元素](https://ja.wikipedia.org/wiki/%E5%85%83%E7%B4%A0)
 

@@ -2,6 +2,67 @@
 
 フェルミ統計に従うフェルミ粒子、ボース統計に従うボース粒子の二種類に分類される。
 
+```mermaid
+C4Component
+
+Container_Boundary(elementaryParticle, "素粒子") {
+  Container_Boundary(fermion, "フェルミ粒子") {
+    Container_Boundary(quark, "クォーク") {
+      Container_Boundary(upTypeQuark, "上系列クォーク") {
+        Container(upQuark, "アップクォーク（u）")
+        Container(charmQuark, "チャームクォーク（c）")
+        Container(topQuark, "トップクォーク（t）")
+      }
+      Container_Boundary(downTypeQuark, "下系列クォーク") {
+        Container(downQuark, "ダウンクォーク（d）")
+        Container(strangeQuark, "ストレンジクォーク（s）")
+        Container(bottomQuark, "ボトムクォーク（b）")
+      }
+    }
+    Container_Boundary(lepton, "レプトン") {
+      Container_Boundary(chargedLepton, "荷電レプトン") {
+        Container(electron, "電子 (e)")
+        Container(muon, "ミュー粒子（μ）")
+        Container(tauon, "タウ粒子（τ）")
+      }
+      Container_Boundary(downQuark, "ニュートリノ") {
+        Container(electronNeutrino, "電子ニュートリノ（νe）")
+        Container(muonNeutrino, "ミューニュートリノ（νμ）")
+        Container(tauonNeutrino, "タウニュートリノ（ντ）")
+      }
+    }
+  }
+  Container_Boundary(boson, "ボース粒子") {
+    Container_Boundary(gaugeBoson, "ゲージ粒子") {
+      Container(gluon, "グルーオン")
+      Container_Boundary(weakBoson, "ウィークボソン") {
+        Container(wBoson, "Wボソン")
+        Container(zBoson, "Zボソン")      
+      }
+      Container(photon, "光子")
+      Container(graviton, "重力子(未発見)")
+    }
+    Container_Boundary(scalarBoson, "スカラー粒子") {
+      Container(higgsBoson , "ヒッグス粒子")
+    }
+  }
+}
+
+Rel(gluon, strongInteraction, "")
+Rel(wBoson, weakInteraction, "")
+Rel(zBoson, weakInteraction, "")
+Rel(photon, electromagneticInteraction, "")
+Rel(graviton, gravitationalInteraction, "")
+
+Container_Boundary(fundamentalInteraction, "基本相互作用") {
+  Container(strongInteraction, "強い相互作用")
+  Container(weakInteraction, "弱い相互作用")
+  Container(electromagneticInteraction, "電磁相互作用")
+  Container(gravitationalInteraction, "重力相互作用")
+}
+
+```
+
 ### [フェルミ粒子](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E7%B2%92%E5%AD%90)
 
 - 素粒子のグループの一つである。

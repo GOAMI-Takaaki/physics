@@ -1,9 +1,12 @@
 # [物質](https://ja.wikipedia.org/wiki/%E7%89%A9%E8%B3%AA)
 
+- 物体をかたちづくり、任意に変化させることのできない性質をもつ存在。
+- 空間の一部を占め、有限の質量をもつもの。
+
 ```mermaid
 C4Component
 
-Container_Boundary(element, "元素") {
+Container_Boundary(molecule, "分子") {
   Container_Boundary(atom, "原子") {
     Container_Boundary(atomicNucleus, "原子核") {
       Container_Boundary(nucleon, "核子") {
@@ -24,10 +27,6 @@ Container_Boundary(element, "元素") {
 }
 
 ```
-
-### [元素](https://ja.wikipedia.org/wiki/%E5%85%83%E7%B4%A0)
-
-- 性質を包括する抽象的概念
 
 ### [分子](https://ja.wikipedia.org/wiki/%E5%88%86%E5%AD%90)
 

@@ -19,6 +19,5 @@
 - [世代](https://ja.wikipedia.org/wiki/%E4%B8%96%E4%BB%A3_(%E7%B4%A0%E7%B2%92%E5%AD%90))
 - [反粒子](https://ja.wikipedia.org/wiki/%E5%8F%8D%E7%B2%92%E5%AD%90)
 - [バリオン数](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%AA%E3%82%AA%E3%83%B3%E6%95%B0)
-- [複合粒子](https://ja.wikipedia.org/wiki/%E8%A4%87%E5%90%88%E7%B2%92%E5%AD%90)
 - [紐](https://en.wikipedia.org/wiki/String_(physics))
-
+- https://gigazine.net/news/20151225-what-is-something/

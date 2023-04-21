@@ -48,19 +48,6 @@ Container_Boundary(elementaryParticle, "素粒子") {
   }
 }
 
-Rel(gluon, strongInteraction, "")
-Rel(wBoson, weakInteraction, "")
-Rel(zBoson, weakInteraction, "")
-Rel(photon, electromagneticInteraction, "")
-Rel(graviton, gravitationalInteraction, "")
-
-Container_Boundary(fundamentalInteraction, "基本相互作用") {
-  Container(strongInteraction, "強い相互作用")
-  Container(weakInteraction, "弱い相互作用")
-  Container(electromagneticInteraction, "電磁相互作用")
-  Container(gravitationalInteraction, "重力相互作用")
-}
-
 ```
 
 ### [フェルミ粒子](https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E7%B2%92%E5%AD%90)

@@ -15,6 +15,7 @@ Container_Boundary(hadron, "ハドロン") {
       Container(baryonQuark1, "クォーク1")
       Container(baryonQuark2, "クォーク2")
       Container(baryonQuark3, "クォーク3")
+      Container(baryonGruon, "グルーオン")
     }
     Container_Boundary(baryonInstance, "例") {
       Container(proton,"陽子")
@@ -30,6 +31,7 @@ Container_Boundary(hadron, "ハドロン") {
     Container_Boundary(mesonModel, "モデル") {
       Container(mesonQuark, "クォーク")
       Container(mesonAntiQuark, "反クォーク")
+      Container(mesonGruon, "グルーオン")
     }
     Container_Boundary(mesonInstance, "例") {
       Container(pion,"パイ中間子(π)")

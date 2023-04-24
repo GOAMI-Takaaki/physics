@@ -40,7 +40,7 @@
 ## [行列](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97)
 
 - 数や記号や式などを縦と横に矩形状に配列したものである。
-‐ 横に並んだ一筋を行(row)、縦に並んだ一筋を列(column)と呼ぶ。
+- 横に並んだ一筋を行(row)、縦に並んだ一筋を列(column)と呼ぶ。
 
 ### [行列式](https://ja.wikipedia.org/wiki/%E8%A1%8C%E5%88%97%E5%BC%8F)
 

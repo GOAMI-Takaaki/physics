@@ -11,5 +11,6 @@
 - [相互作用](./Interaction.md)
 - [理論](./Theory.md)
 - [群](./Group.md)
+- [行列](./Matrix.md)
 - [加速器](./Collider.md)
 - [その他](./Others.md)

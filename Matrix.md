@@ -13,19 +13,23 @@ flowchart TD
 
     square["正方行列(A)"]
 
-    diagonal["対角行列"]
-
     symmetric["対称行列"]
     realSymmetric["実対称行列"]
+
+    diagonal["対角行列"]
+    identity["単位行列"]
 
     antiSymmetric["交代行列"]
     realAntiSymmetric["実交代行列"]
 
+    regular["正則行列"]
+    inverse["逆行列"]
+
     orthogonal["直行行列"]
     realOrthogonal["実直行行列"]
-
     transpose["転置行列(tA)"]
     complexConjugate["複素共役行列(A‾)"]
+
     adjoint["随伴行列(A†)"]
     normal["正規行列"]
     hermitian["エルミート行列"]
@@ -36,36 +40,40 @@ flowchart TD
     real --"すべて0である"--> zero
     matrix --"すべて複素数である"--> complex
     matrix --"行数=列数"--> square
-    square --"AA∗=A∗Aである"--> normal
-    square --"対角成分以外が零である"--> diagonal
 
-    square --転置--> transpose
-    transpose --"tA=A"--> symmetric
+    square --"tA=A"--> symmetric
+    symmetric --"対角成分以外が零である"--> diagonal
     symmetric --"実数"--> realSymmetric
+    symmetric --"AA∗=A∗Aである"--> normal
 
-    transpose --"tA=−A"--> antiSymmetric
+    diagonal --"対角成分が1である"--> identity
+
+    square --"tA=−A"--> antiSymmetric
     antiSymmetric --"実数"--> realAntiSymmetric
 
-    transpose --"tA=A^−1"--> orthogonal
+    square --"AA^−1=A^−1A"--> inverse
+    square --"逆行列が存在する"--> regular
+    regular -."逆元".-> inverse
+
+    square --"tA=A^−1"--> orthogonal
     orthogonal --"実数"--> realOrthogonal
 
-    square --複素共役--> complexConjugate
-    transpose --複素共役--> adjoint
-    complexConjugate --転置--> adjoint
+    square ==転置==> transpose
+    square ==複素共役==> complexConjugate
+    transpose ==複素共役==> adjoint
+    complexConjugate ==転置==> adjoint
 
-
-    adjoint --"A†=A^−1"--> unitary
-    realOrthogonal -.-> unitary
     unitary -.-> normal
-
-    adjoint --"A†=A"--> hermitian
-
     zero -.-> normal
     realSymmetric -.-> normal
     realAntiSymmetric -.-> normal
     realOrthogonal -.-> normal
     diagonal -.-> normal
     hermitian -.-> normal
+
+    realOrthogonal -.-> unitary
+    adjoint --"A†=A^−1"--> unitary
+    adjoint --"A†=A"--> hermitian
 ```
 
 ## 空行列
@@ -92,11 +100,6 @@ flowchart TD
 
 - 正方行列である。
 - 対角成分以外が零である。
-
-## [転置行列](https://ja.wikipedia.org/wiki/%E8%BB%A2%E7%BD%AE%E8%A1%8C%E5%88%97)
-
-- 要素を入れ替えてできる。
-- 被作用
  
 ## [対称行列](https://ja.wikipedia.org/wiki/%E5%AF%BE%E7%A7%B0%E8%A1%8C%E5%88%97)
 
@@ -104,6 +107,17 @@ flowchart TD
 - 対称性がある。
 - 自身の転置行列と一致する。
 - 転置に対して対称性を持つ。
+
+## [単位行列](https://ja.wikipedia.org/wiki/%E5%8D%98%E4%BD%8D%E8%A1%8C%E5%88%97)
+
+- 正方行列である。
+- 対角行列である。
+- 対称行列である。
+- 対角成分に1が並び、他は全て0となる。
+
+### スカラー行列
+
+- 単位行列をスカラー倍した。
 
 ## [交代行列](https://ja.wikipedia.org/wiki/%E4%BA%A4%E4%BB%A3%E8%A1%8C%E5%88%97)
 
@@ -125,9 +139,20 @@ flowchart TD
 - 非特異行列とも言う。
 - 可逆行列とも言う。
 - 正方行列である。
-- 通常の積に関する逆元を持つ。
+- 逆行列が存在する。
 
 ## 逆行列
+
+- 正方行列である。
+- AA^−1=A^−1Aが成り立つ。
+- ある行列で線形変換した空間を元に戻す。
+- 行列における割り算とされる。
+- 通常の積に関する逆元を持つ。
+
+### [逆元](https://ja.wikipedia.org/wiki/%E9%80%86%E5%85%83)
+
+- 数の加法に対する反数や乗法に関する逆数の概念の一般化である。
+- 与えられた元に結合してその効果を「打ち消す」効果を持つ元のことである。
 
 ## [直交行列](https://ja.wikipedia.org/wiki/%E7%9B%B4%E4%BA%A4%E8%A1%8C%E5%88%97)
 
@@ -141,15 +166,14 @@ flowchart TD
 
 ### 置換行列
 
+## [転置行列](https://ja.wikipedia.org/wiki/%E8%BB%A2%E7%BD%AE%E8%A1%8C%E5%88%97)
+
+- 要素を入れ替えてできる。
+- 被作用
+
 ## 複素共役行列
 
 - すべての成分の共役複素数を成分とする。
-
-## [ユニタリ行列](https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E8%A1%8C%E5%88%97)
-
-- 正方行列である。
-- 正規行列である。
-- 直交行列を複素数体へ拡張した。
 
 ## [随伴行列](https://ja.wikipedia.org/wiki/%E9%9A%8F%E4%BC%B4%E8%A1%8C%E5%88%97)
 
@@ -157,21 +181,18 @@ flowchart TD
 - エルミート共軛 (Hermitian conjugate)とも言う。
 - エルミート随伴 (Hermitian adjoint) とも言う。
 
+## [ユニタリ行列](https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%8B%E3%82%BF%E3%83%AA%E8%A1%8C%E5%88%97)
+
+- 正方行列である。
+- 正規行列である。
+- 直交行列を複素数体へ拡張した。
+
 ## [エルミート行列](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E8%A1%8C%E5%88%97)
 
 - 自己随伴行列（self-adjoint matrix）とも言う。
 - 複素数に成分をとる正方行列である。
 - 自身の随伴行列（共軛転置）と一致する。
 - 対称性がある。
-
-## 単位行列
-
-- 複素数を成分とする。
-
-## [逆元](https://ja.wikipedia.org/wiki/%E9%80%86%E5%85%83)
-
-- 数の加法に対する反数や乗法に関する逆数の概念の一般化である。
-- 与えられた元に結合してその効果を「打ち消す」効果を持つ元のことである。
 
 ## [共役/共軛](https://ja.wikipedia.org/wiki/%E5%85%B1%E5%BD%B9)
 
@@ -187,3 +208,5 @@ flowchart TD
 
 - 正方行列に対して定義される。
 - 線型変換に対して線形空間の拡大率と言える。
+- 逆行列の導出に利用される。
+

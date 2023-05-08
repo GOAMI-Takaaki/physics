@@ -75,10 +75,10 @@ flowchart TD
     square --"tA=A^−1"--> orthogonal
     orthogonal --"実数"--> realOrthogonal
 
-    square ==転置==> transpose
-    square ==複素共役==> complexConjugate
-    transpose ==複素共役==> adjoint
-    complexConjugate ==転置==> adjoint
+    square --"転置<br>(i,j)->(j,i)"--> transpose
+    square --複素共役--> complexConjugate
+    transpose --複素共役--> adjoint
+    complexConjugate --転置--> adjoint
 
     unitary -.-> normal
     zero -.-> normal
@@ -272,7 +272,8 @@ flowchart TD
 ## [エルミート行列](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%88%E8%A1%8C%E5%88%97)
 
 - 自己随伴行列（self-adjoint matrix）とも言う。
-- 複素数に成分をとる正方行列である。
+- 正方行列である。
+- 複素数に成分をとる。
 - 自身の随伴行列（共軛転置）と一致する。
 - 対称性がある。
 

@@ -69,10 +69,26 @@ A の要素全てにおいて，B の要素をただ一つ返す。
 - 可逆である。
 - 逆関数(逆写像)が定義できる。
 
+## [逆写像 (inverse mapping)](https://ja.wikipedia.org/wiki/%E9%80%86%E5%86%99%E5%83%8F)
+
+写像の与える元の対応関係を「反対」にして得られる写像である。
+
+- 全単射となる。
+
+## [恒等写像 (identity mapping)](https://ja.wikipedia.org/wiki/%E6%81%92%E7%AD%89%E5%86%99%E5%83%8F)
+
+同じ値を常にそのまま返す写像である。
+
+- 定義域および終域が同一である。
+
 ### [線形写像 (linear mapping)](https://ja.wikipedia.org/wiki/%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F)
 
-ベクトル空間の和と定数倍が保存される。
+ベクトル空間の和と定数倍が保存される写像である。
 
 - 以下が成立する。
   - f(x+y)=f(x)+f(y)
   - f(kx)=kf(x)
+
+### [多重線型写像](https://ja.wikipedia.org/wiki/%E5%A4%9A%E9%87%8D%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F)
+
+- TODO

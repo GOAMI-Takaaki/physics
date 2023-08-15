@@ -112,3 +112,7 @@ ex.
   - = 2\*2^2-2\*1^2
   - = 8-4
   - = 4
+
+## 参考
+
+- [LaTeX/Mathematics](https://en.wikibooks.org/wiki/LaTeX/Mathematics)

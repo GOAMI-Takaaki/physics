@@ -28,3 +28,23 @@
     - 代数的数
       - ex. ± i
 
+
+## [虚数単位 (imaginary unit)](https://ja.wikipedia.org/wiki/%E8%99%9A%E6%95%B0%E5%8D%98%E4%BD%8D)
+
+2乗して −1 になる数のことである。
+
+- i^2=-1
+- i=√-1
+- i は実数でない。
+
+## [複素数 (complex number)](https://ja.wikipedia.org/wiki/%E8%A4%87%E7%B4%A0%E6%95%B0)
+
+2つの実数 a, b と虚数単位 i を用いて表す数である。
+
+- z = a + bi
+
+### [共役・共軛複素数（complex conjugate number）](https://ja.wikipedia.org/wiki/%E8%A4%87%E7%B4%A0%E5%85%B1%E5%BD%B9)
+
+虚部 b を反数にした複素数である。
+
+- z¯ = a − bi

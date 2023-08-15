@@ -92,3 +92,10 @@ A の要素全てにおいて，B の要素をただ一つ返す。
 ### [多重線型写像](https://ja.wikipedia.org/wiki/%E5%A4%9A%E9%87%8D%E7%B7%9A%E5%9E%8B%E5%86%99%E5%83%8F)
 
 - TODO
+
+## [ガウスの消去法(Gaussian elimination)](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B9%E3%81%AE%E6%B6%88%E5%8E%BB%E6%B3%95)
+
+- 掃き出し法とも言う。
+- 2つのステップから成る
+  - 前進消去 (forward elimination) 
+  - 後退代入 (backward substitution) 

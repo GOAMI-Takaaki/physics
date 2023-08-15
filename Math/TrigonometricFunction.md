@@ -10,3 +10,13 @@
   - 余割、csc,cosec（cosecant）
   - 余接、cot（cotangent）
 
+## 参考
+
+- [あなたと夜と数学と - なぜサインは正弦？](http://simomath.blog.fc2.com/blog-entry-569.html)
+- [八線](http://yamada-kuebiko.cocolog-nifty.com/photos/uncategorized/2015/03/03/hassen.png)
+
+## 直角三角形による定義
+
+## 単位円による定義
+
+## 加法定理

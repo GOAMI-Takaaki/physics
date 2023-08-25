@@ -23,9 +23,11 @@
 
 ## 直角三角形による定義
 
-![三角関数](./images/trigonometric.png)
+![直角三角形による定義](./images/trigonometric.png)
 
 ## 単位円による定義
+
+![単位円による定義](./images/trigonometric-unitcircle.png)
 
 ## 加法定理
 
